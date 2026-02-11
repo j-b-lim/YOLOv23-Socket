@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 
+
 def main():
     model = YOLO("best.pt")
 
@@ -17,6 +18,7 @@ def main():
     results[0].show()
 
     model.export(format="onnx")
+
 
 if __name__ == "__main__":
     main()
