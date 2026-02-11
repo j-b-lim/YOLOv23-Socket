@@ -44,6 +44,6 @@ python client.py
 
 ## **References**
 
-This implementation is based on the following repository.[YOLOv23](https://github.com/ultralytics/ultralytics).
+This implementation is based on the following [repository](https://github.com/ultralytics/ultralytics).
 
 If you have any questions, please feel free to contact the writer at rkfakehd112@gmail.com.
