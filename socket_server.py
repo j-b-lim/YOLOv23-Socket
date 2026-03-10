@@ -1,4 +1,5 @@
 import eventlet
+
 eventlet.monkey_patch()
 from flask import Flask
 from flask_socketio import SocketIO, emit
@@ -6,19 +7,23 @@ from flask_socketio import SocketIO, emit
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-@socketio.on('connect')
+
+@socketio.on("connect")
 def on_connect():
     print("Client has connected.")
-    emit('server_message', {'message': 'Connected to the server.'})
+    emit("server_message", {"message": "Connected to the server."})
 
-@socketio.on('detection_result')
+
+@socketio.on("detection_result")
 def handle_detection(data):
-    emit('detection_result', data, broadcast=True)
+    emit("detection_result", data, broadcast=True)
 
-@app.route('/')
+
+@app.route("/")
 def index():
-    return app.send_static_file('websocket_client.html')
+    return app.send_static_file("websocket_client.html")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print("WebSocket server is running (http://<server IP>:5050)")
-    socketio.run(app, host='0.0.0.0', port=5050)
+    socketio.run(app, host="0.0.0.0", port=5050)
