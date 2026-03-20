@@ -10,8 +10,8 @@
 a. Create a conda virtual environment and activate it.
 
 ```shell
-conda create -n YOLOv23-Socket python=3.8 -y
-conda activate YOLOv23-Socket
+conda create -n YOLOv26-Socket python=3.8 -y
+conda activate YOLOv26-Socket
 ```
 
 b. Install PyTorch and torchvision following the [official instructions](https://pytorch.org/), *e.g.*,
@@ -27,8 +27,8 @@ pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https
 c. Install required packages
 
 ```shell
-git clone https://github.com/JaebinLimm/YOLOv23-Socket.git
-cd YOLOv23-Socket
+git clone https://github.com/JaebinLimm/YOLOv26-Socket.git
+cd YOLOv26-Socket
 pip install -r requirements.txt
 ```
 
