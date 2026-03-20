@@ -28,7 +28,7 @@ c. Install required packages
 
 ```shell
 git clone https://github.com/JaebinLimm/YOLOv23-Socket.git
-cd YOLOv5-Socket
+cd YOLOv23-Socket
 pip install -r requirements.txt
 ```
 
